@@ -22,7 +22,7 @@ uint8_t process(struct state* tState) {
 
 	// Compute delta over filtered data, and compare it to threshold
 	tState->rDelta  = fabs(tState->rFilteredRef - tState->rFilteredDat);
-	tState->iResult = tState->rDelta > tState->rDeltaThreshold ? 0 : 1;
+	tState->iResult = tState->rDelta <= tState->rDeltaThreshold ? 0 : 1;
 
 	// Update iteration count, to inform users measurements are progressing
 	tState->iTimeStamp++;

@@ -114,7 +114,7 @@ int main(void)
 	  HAL_Delay(3000);
 
 	  char sMessage[64];
-	  sprintf(sMessage, "%f, %f\n", tState.rFilteredRef, tState.rFilteredDat);
+	  sprintf(sMessage, "%d, %f, %f, %d\n", tState.iTimeStamp, tState.rFilteredRef, tState.rFilteredDat, tState.iResult);
 	  HAL_UART_Transmit(&huart1, (uint8_t *)sMessage, strlen(sMessage), 10);
 
   }
