@@ -12,7 +12,6 @@
 #define DATA_MNG_H_
 
 #include <stdio.h>
-#include "data_mng.h"
 #include "data_set.h"
 #include "chip_access.h"
 
